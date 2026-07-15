@@ -58,6 +58,15 @@ calendar — built to manage bookings and prevent scheduling conflicts.*
   </tr>
 </table>
 
+**📱 No celular · On mobile** — a agenda vira **lista da semana** (texto por extenso, sem estourar as bordas) e o nome do salão ganha **destaque** no topo.
+
+<table>
+  <tr>
+    <td width="50%" valign="top" align="center"><b>Agenda — lista da semana</b><br/><img src="assets/08-agenda-mobile.png" alt="Agenda no celular (lista da semana)" width="300"/></td>
+    <td width="50%" valign="top" align="center"><b>Dashboard</b><br/><img src="assets/09-dashboard-mobile.png" alt="Dashboard no celular" width="300"/></td>
+  </tr>
+</table>
+
 ---
 
 ## 🧱 Stack
