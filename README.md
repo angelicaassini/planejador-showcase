@@ -76,7 +76,7 @@ calendar — built to manage bookings and prevent scheduling conflicts.*
 | **Backend** | Python · Django · Django REST Framework · JWT (SimpleJWT) |
 | **Frontend** | React · TypeScript · Vite · Material UI · React Query · Zustand · FullCalendar |
 | **Banco** | PostgreSQL |
-| **Qualidade** | 159 testes · 100% de cobertura · E2E (API + Playwright) |
+| **Qualidade** | 367 testes · 97% de cobertura · E2E (API + Playwright) |
 | **Deploy** | Vercel (front) · Render (API) · Supabase (DB) |
 
 ---
@@ -93,7 +93,8 @@ calendar — built to manage bookings and prevent scheduling conflicts.*
   um request HTTP.
 - **Autenticação JWT** com papéis (`SAAS_ADMIN` / `BUSINESS_ADMIN` / `OPERATOR`).
 - **Datas em UTC** no banco; fuso do salão aplicado só na exibição.
-- **159 testes, 100% de cobertura** no backend, mais E2E de API e de navegador (Playwright).
+- **367 testes, 97% de cobertura** no backend (a CI reprova abaixo de 90%), mais E2E de
+  API e de navegador (Playwright).
 
 ---
 
