@@ -69,12 +69,48 @@ calendar — built to manage bookings and prevent scheduling conflicts.*
 
 ---
 
+## 🤖 Maria Júlia — atendimento por IA no WhatsApp
+
+A **Maria Júlia** atende no **WhatsApp oficial** (Meta Cloud API) e **agenda, remarca e
+cancela sozinha**, no número real do salão, em produção. A conversa abre com uma saudação
+pela hora do dia e três botões; daí em diante o fluxo é **clicável e determinístico**
+(serviço → profissional → dia → horário), montado pelo **motor de disponibilidade** do
+backend. O modelo de linguagem entra só para conversar e entender pedidos livres — **quem
+escolhe horário e grava no banco é o código**, então ela não inventa horário nem promete o
+que a agenda não tem.
+
+*Maria Júlia answers on official WhatsApp (Meta Cloud API) and books, reschedules and
+cancels on her own. The LLM handles conversation; the backend owns availability and writes
+to the database — so the flow is deterministic and free of hallucinated time slots.*
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><b>Abertura — saudação e três caminhos</b><br/><img src="assets/10-whatsapp-abertura.png" alt="Maria Júlia abre a conversa com saudação e os botões Agendar, Remarcar e Cancelar"/></td>
+    <td width="50%" valign="top"><b>Agendando por menus clicáveis</b><br/><img src="assets/11-whatsapp-agendamento.png" alt="Menus de profissional, dia e horário até a confirmação do agendamento"/></td>
+  </tr>
+</table>
+
+**A prova · The proof** — o agendamento nasceu no WhatsApp e aparece **na agenda do
+salão**, quinta 10/09 às 14:30, no mesmo minuto:
+
+![Agenda do salão com o agendamento criado pela Maria Júlia](assets/12-agenda-do-whatsapp.png)
+
+- **Sem alucinação**: os horários oferecidos vêm do mesmo motor de disponibilidade da
+  agenda web — jornada de trabalho, folgas e agendamentos já existentes.
+- **Barato de rodar**: cumprimento, agradecimento e os menus são respondidos pelo próprio
+  código, sem chamar o modelo.
+- **Uma conversa por cliente**: histórico e contexto persistidos, para remarcar e cancelar
+  sem repetir pergunta.
+
+---
+
 ## 🧱 Stack
 
 | Camada | Tecnologias |
 |---|---|
 | **Backend** | Python · Django · Django REST Framework · JWT (SimpleJWT) |
 | **Frontend** | React · TypeScript · Vite · Material UI · React Query · Zustand · FullCalendar |
+| **IA · WhatsApp** | Meta Cloud API · agente com function calling (Gemini/Groq) · menus interativos |
 | **Banco** | PostgreSQL |
 | **Qualidade** | 367 testes · 97% de cobertura · E2E (API + Playwright) |
 | **Deploy** | Vercel (front) · Render (API) · Supabase (DB) |
