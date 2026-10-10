@@ -21,7 +21,7 @@
 
 ---
 
-## ✨ Visão geral
+## ✨ Visão geral · Overview
 
 O **Planejador** é um sistema de agendamento onde **cada salão é um _tenant_ com dados
 totalmente isolados** — equipe, serviços, profissionais e agenda próprios. Cabeleireiros,
@@ -34,42 +34,48 @@ calendar — built to manage bookings and prevent scheduling conflicts.*
 > 📌 Este é o **repositório-vitrine** do projeto. O código-fonte completo é **privado**
 > (produto comercial). Aqui ficam a **demo ao vivo**, **capturas de tela**, a
 > **arquitetura** e **trechos curados** do código.
+>
+> *This is the project's **showcase repository**. The full source code is **private**
+> (commercial product). Here you'll find the **live demo**, **screenshots**, the
+> **architecture** and **curated code excerpts**.*
 
 ---
 
 ## 🖥️ Telas · Screenshots
 
-**Agenda — visão por profissional** (eventos coloridos por serviço, sem sobreposição)
+**Agenda — visão por profissional** (eventos coloridos por serviço, sem sobreposição)<br/>
+*Calendar — per-professional view (events coloured by service, no overlaps)*
 
 ![Agenda](assets/03-agenda.png)
 
 <table>
   <tr>
     <td width="50%" valign="top"><b>Dashboard</b><br/><img src="assets/02-dashboard.png" alt="Dashboard"/></td>
-    <td width="50%" valign="top"><b>Detalhe do agendamento</b><br/><img src="assets/04-agenda-detalhe.png" alt="Detalhe do agendamento"/></td>
+    <td width="50%" valign="top"><b>Detalhe do agendamento</b><br/><i>Appointment details</i><br/><img src="assets/04-agenda-detalhe.png" alt="Detalhe do agendamento"/></td>
   </tr>
   <tr>
-    <td valign="top"><b>Todos os profissionais (visão Dia)</b><br/><img src="assets/05-agenda-todos.png" alt="Agenda de todos os profissionais"/></td>
-    <td valign="top"><b>Serviços</b><br/><img src="assets/06-servicos.png" alt="Tipos de serviço"/></td>
+    <td valign="top"><b>Todos os profissionais (visão Dia)</b><br/><i>All professionals (Day view)</i><br/><img src="assets/05-agenda-todos.png" alt="Agenda de todos os profissionais"/></td>
+    <td valign="top"><b>Serviços</b><br/><i>Services</i><br/><img src="assets/06-servicos.png" alt="Tipos de serviço"/></td>
   </tr>
   <tr>
-    <td valign="top"><b>Profissionais</b><br/><img src="assets/07-profissionais.png" alt="Profissionais"/></td>
+    <td valign="top"><b>Profissionais</b><br/><i>Professionals</i><br/><img src="assets/07-profissionais.png" alt="Profissionais"/></td>
     <td valign="top"><b>Login</b><br/><img src="assets/01-login.png" alt="Login"/></td>
   </tr>
 </table>
 
-**📱 No celular · On mobile** — a agenda vira **lista da semana** (texto por extenso, sem estourar as bordas) e o nome do salão ganha **destaque** no topo.
+**📱 No celular · On mobile** — a agenda vira **lista da semana** (texto por extenso, sem estourar as bordas) e o nome do salão ganha **destaque** no topo.<br/>
+*The calendar becomes a **weekly list** (full text, nothing overflowing the edges) and the salon's name is **highlighted** at the top.*
 
 <table>
   <tr>
-    <td width="50%" valign="top" align="center"><b>Agenda — lista da semana</b><br/><img src="assets/08-agenda-mobile.png" alt="Agenda no celular (lista da semana)" width="300"/></td>
+    <td width="50%" valign="top" align="center"><b>Agenda — lista da semana</b><br/><i>Calendar — weekly list</i><br/><img src="assets/08-agenda-mobile.png" alt="Agenda no celular (lista da semana)" width="300"/></td>
     <td width="50%" valign="top" align="center"><b>Dashboard</b><br/><img src="assets/09-dashboard-mobile.png" alt="Dashboard no celular" width="300"/></td>
   </tr>
 </table>
 
 ---
 
-## 🤖 Maria Júlia — atendimento por IA no WhatsApp
+## 🤖 Maria Júlia — atendimento por IA no WhatsApp · AI assistant on WhatsApp
 
 A **Maria Júlia** atende no **WhatsApp oficial** (Meta Cloud API) e **agenda, remarca e
 cancela sozinha**, no número real do salão, em produção. A conversa abre com uma saudação
@@ -85,52 +91,71 @@ to the database — so the flow is deterministic and free of hallucinated time s
 
 <table>
   <tr>
-    <td width="50%" valign="top"><b>Abertura — saudação e três caminhos</b><br/><img src="assets/10-whatsapp-abertura.png" alt="Maria Júlia abre a conversa com saudação e os botões Agendar, Remarcar e Cancelar"/></td>
-    <td width="50%" valign="top"><b>Agendando por menus clicáveis</b><br/><img src="assets/11-whatsapp-agendamento.png" alt="Menus de profissional, dia e horário até a confirmação do agendamento"/></td>
+    <td width="50%" valign="top"><b>Abertura — saudação e três caminhos</b><br/><i>Opening — greeting and three paths</i><br/><img src="assets/10-whatsapp-abertura.png" alt="Maria Júlia abre a conversa com saudação e os botões Agendar, Remarcar e Cancelar"/></td>
+    <td width="50%" valign="top"><b>Agendando por menus clicáveis</b><br/><i>Booking through clickable menus</i><br/><img src="assets/11-whatsapp-agendamento.png" alt="Menus de profissional, dia e horário até a confirmação do agendamento"/></td>
   </tr>
 </table>
 
 **A prova · The proof** — o agendamento nasceu no WhatsApp e aparece **na agenda do
-salão**, quinta 10/09 às 14:30, no mesmo minuto:
+salão**, quinta 10/09 às 14:30, no mesmo minuto:<br/>
+*the appointment was born on WhatsApp and shows up **on the salon's calendar**, Thursday
+Sep 10 at 2:30 pm, within the same minute:*
 
 ![Agenda do salão com o agendamento criado pela Maria Júlia](assets/12-agenda-do-whatsapp.png)
 
 - **Sem alucinação**: os horários oferecidos vêm do mesmo motor de disponibilidade da
-  agenda web — jornada de trabalho, folgas e agendamentos já existentes.
+  agenda web — jornada de trabalho, folgas e agendamentos já existentes.<br/>
+  ***No hallucination**: the offered slots come from the same availability engine as the web
+  calendar — working hours, days off and existing appointments.*
 - **Barato de rodar**: cumprimento, agradecimento e os menus são respondidos pelo próprio
-  código, sem chamar o modelo.
+  código, sem chamar o modelo.<br/>
+  ***Cheap to run**: greetings, thank-yous and the menus are answered by the code itself,
+  without calling the model.*
 - **Uma conversa por cliente**: histórico e contexto persistidos, para remarcar e cancelar
-  sem repetir pergunta.
+  sem repetir pergunta.<br/>
+  ***One conversation per customer**: history and context are persisted, so rescheduling and
+  cancelling never repeat a question.*
 
 ---
 
 ## 🧱 Stack
 
-| Camada | Tecnologias |
+| Camada · Layer | Tecnologias · Technologies |
 |---|---|
 | **Backend** | Python · Django · Django REST Framework · JWT (SimpleJWT) |
 | **Frontend** | React · TypeScript · Vite · Material UI · React Query · Zustand · FullCalendar |
-| **IA · WhatsApp** | Meta Cloud API · agente com function calling (Gemini/Groq) · menus interativos |
-| **Banco** | PostgreSQL |
-| **Qualidade** | 367 testes · 97% de cobertura · E2E (API + Playwright) |
+| **IA · WhatsApp** | Meta Cloud API · agente com function calling (Gemini/Groq) · menus interativos<br/>*Meta Cloud API · function-calling agent (Gemini/Groq) · interactive menus* |
+| **Banco · Database** | PostgreSQL |
+| **Qualidade · Quality** | 367 testes · 97% de cobertura · E2E (API + Playwright)<br/>*367 tests · 97% coverage · E2E (API + Playwright)* |
 | **Deploy** | Vercel (front) · Render (API) · Supabase (DB) |
 
 ---
 
-## 🏛️ Arquitetura & destaques
+## 🏛️ Arquitetura & destaques · Architecture & highlights
 
 - **Multi-tenancy** (_shared-schema_): coluna `tenant` em todas as tabelas + um
   `TenantFilterMixin` que **isola os dados de cada salão automaticamente**, sem repetir
-  filtros em cada view.
+  filtros em cada view.<br/>
+  *A `tenant` column on every table + a `TenantFilterMixin` that **isolates each salon's
+  data automatically**, with no filters repeated in every view.*
 - **Motor de disponibilidade**: calcula horários livres respeitando a **jornada de
   trabalho**, **exceções** (folgas e horários especiais) e os **agendamentos existentes**,
-  com encaixe sequencial e descarte de horários no passado.
+  com encaixe sequencial e descarte de horários no passado.<br/>
+  ***Availability engine**: computes free slots honouring **working hours**, **exceptions**
+  (days off and special hours) and **existing appointments**, with sequential fitting and
+  past slots discarded.*
 - **Padrão Selectors/Services**: regra de negócio separada das views → testável sem subir
-  um request HTTP.
-- **Autenticação JWT** com papéis (`SAAS_ADMIN` / `BUSINESS_ADMIN` / `OPERATOR`).
-- **Datas em UTC** no banco; fuso do salão aplicado só na exibição.
+  um request HTTP.<br/>
+  ***Selectors/Services pattern**: business rules kept out of the views → testable without
+  an HTTP request.*
+- **Autenticação JWT** com papéis (`SAAS_ADMIN` / `BUSINESS_ADMIN` / `OPERATOR`).<br/>
+  ***JWT authentication** with roles (`SAAS_ADMIN` / `BUSINESS_ADMIN` / `OPERATOR`).*
+- **Datas em UTC** no banco; fuso do salão aplicado só na exibição.<br/>
+  ***UTC datetimes** in the database; the salon's time zone is applied only on display.*
 - **367 testes, 97% de cobertura** no backend (a CI reprova abaixo de 90%), mais E2E de
-  API e de navegador (Playwright).
+  API e de navegador (Playwright).<br/>
+  ***367 tests, 97% backend coverage** (CI fails below 90%), plus API and browser E2E
+  (Playwright).*
 
 ---
 
@@ -138,12 +163,19 @@ salão**, quinta 10/09 às 14:30, no mesmo minuto:
 
 > Amostras **curadas** (não-rodáveis) que mostram o estilo de código e as decisões de
 > arquitetura. Arquivos completos em [`snippets/`](snippets/).
+>
+> *Curated (non-runnable) samples showing the coding style and architectural decisions. Full
+> files in [`snippets/`](snippets/).*
 
-### 1. Isolamento multi-tenant — `TenantFilterMixin`
+### 1. Isolamento multi-tenant · Multi-tenant isolation — `TenantFilterMixin`
 
 Toda ViewSet que herda este mixin passa a filtrar os dados pelo salão do usuário logado e
 injeta o `tenant` ao criar registros. **Isolamento por construção** — um salão nunca
 enxerga dados de outro.
+
+*Every ViewSet that inherits this mixin filters data by the logged-in user's salon and
+injects the `tenant` when creating records. **Isolation by construction** — a salon never
+sees another salon's data.*
 
 ```python
 class TenantFilterMixin:
@@ -163,10 +195,13 @@ class TenantFilterMixin:
         serializer.save(tenant=tenant)
 ```
 
-### 2. Motor de disponibilidade — `get_available_slots`
+### 2. Motor de disponibilidade · Availability engine — `get_available_slots`
 
 Dado um profissional, uma data e um serviço, devolve os horários livres. Considera a
 jornada, as exceções e os agendamentos já marcados, fazendo **encaixe sequencial**.
+
+*Given a professional, a date and a service, returns the free slots. It takes working hours,
+exceptions and existing bookings into account, with **sequential fitting**.*
 
 ```python
 def get_available_slots(professional, date, service_type):
@@ -206,10 +241,13 @@ def get_available_slots(professional, date, service_type):
     return slots
 ```
 
-### 3. Teste — sem duplo-agendamento
+### 3. Teste · Test — sem duplo-agendamento · no double booking
 
 Numa janela de 3h com serviço de 60 min há **3 horários**; depois de marcar 09:00, aquele
 horário **some** da disponibilidade — o sistema não permite duplo-agendamento.
+
+*A 3-hour window with a 60-minute service has **3 slots**; after booking 09:00, that slot
+**disappears** from availability — the system does not allow double booking.*
 
 ```python
 def test_slots_in_empty_day(self):
