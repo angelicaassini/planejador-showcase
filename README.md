@@ -126,7 +126,7 @@ Sep 10 at 2:30 pm, within the same minute:*
 | **Frontend** | React · TypeScript · Vite · Material UI · React Query · Zustand · FullCalendar |
 | **IA · WhatsApp** | Meta Cloud API · agente com function calling (Gemini/Groq) · menus interativos<br/>*Meta Cloud API · function-calling agent (Gemini/Groq) · interactive menus* |
 | **Banco · Database** | PostgreSQL |
-| **Qualidade · Quality** | 367 testes · 97% de cobertura · E2E (API + Playwright)<br/>*367 tests · 97% coverage · E2E (API + Playwright)* |
+| **Qualidade · Quality** | 396 testes de backend · 97% de cobertura · 41 de frontend · 6 cenários E2E (Playwright)<br/>*396 backend tests · 97% coverage · 41 frontend tests · 6 E2E scenarios (Playwright)* |
 | **Deploy** | Vercel (front) · Render (API) · Supabase (DB) |
 
 ---
@@ -152,9 +152,9 @@ Sep 10 at 2:30 pm, within the same minute:*
   ***JWT authentication** with roles (`SAAS_ADMIN` / `BUSINESS_ADMIN` / `OPERATOR`).*
 - **Datas em UTC** no banco; fuso do salão aplicado só na exibição.<br/>
   ***UTC datetimes** in the database; the salon's time zone is applied only on display.*
-- **367 testes, 97% de cobertura** no backend (a CI reprova abaixo de 90%), mais E2E de
+- **396 testes, 97% de cobertura** no backend (a CI reprova abaixo de 90%), mais E2E de
   API e de navegador (Playwright).<br/>
-  ***367 tests, 97% backend coverage** (CI fails below 90%), plus API and browser E2E
+  ***396 tests, 97% backend coverage** (CI fails below 90%), plus API and browser E2E
   (Playwright).*
 
 ---
