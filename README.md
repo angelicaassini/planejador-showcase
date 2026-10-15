@@ -1,8 +1,8 @@
 <h1 align="center">Planejador</h1>
 
 <p align="center">
-  <b>SaaS de agendamento multi-tenant para profissionais de beleza</b><br/>
-  <i>Multi-tenant scheduling SaaS for beauty professionals — hair, barber & esthetics</i>
+  <b>SaaS de agendamento multi-tenant para negócios que atendem com hora marcada</b><br/>
+  <i>Multi-tenant scheduling SaaS for appointment-based businesses — salons, clinics, dental offices, studios</i>
 </p>
 
 <p align="center">
@@ -23,13 +23,17 @@
 
 ## ✨ Visão geral · Overview
 
-O **Planejador** é um sistema de agendamento onde **cada salão é um _tenant_ com dados
-totalmente isolados** — equipe, serviços, profissionais e agenda próprios. Cabeleireiros,
-barbeiros e esteticistas independentes gerenciam horários, **evitam conflitos de agenda**
-e organizam seus clientes num painel simples e rápido.
+O **Planejador** é um sistema de agendamento para **qualquer negócio que atende com hora
+marcada** — salões, barbearias, clínicas, consultórios, estúdios. **Cada negócio é um _tenant_
+com dados totalmente isolados** — equipe, serviços, profissionais, agenda e identidade visual
+próprias. O modelo é genérico; a primeira versão e a demo estão configuradas como **salão de
+beleza**, e é assim que as telas abaixo aparecem. Os profissionais gerenciam horários,
+**evitam conflitos de agenda** e organizam seus clientes num painel simples e rápido.
 
-*Each salon is a fully isolated tenant with its own team, services, professionals and
-calendar — built to manage bookings and prevent scheduling conflicts.*
+*Built for any appointment-based business — salons, clinics, dental offices, studios. Each
+business is a fully isolated tenant with its own team, services, professionals, calendar and
+branding. The model is generic; the first version and the demo are set up as a beauty salon,
+which is what the screenshots below show.*
 
 > 📌 Este é o **repositório-vitrine** do projeto. O código-fonte completo é **privado**
 > (produto comercial). Aqui ficam a **demo ao vivo**, **capturas de tela**, a
