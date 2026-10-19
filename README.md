@@ -272,5 +272,4 @@ def test_booked_slot_is_removed(self):
 
 ## 📫 Contato · Contact
 
-- 💼 LinkedIn: [angelica-assini](https://www.linkedin.com/in/angelica-assini/)
 - 📧 [assini.angelica@gmail.com](mailto:assini.angelica@gmail.com)
